@@ -1,0 +1,325 @@
+[
+  {
+    "id": 1,
+    "categoria": "Hambúrgueres",
+    "itens": [
+      {
+        "id": 1,
+        "nome": "X-Burguer",
+        "descricao": "Pão, hambúrguer, queijo e molho especial.",
+        "img": "../src/assets/img/burger.jpg" ,
+        "preco": 15.90,
+        "adicionais": [
+          {
+            "id": 1,
+            "nome": "Bacon",
+            "preco": 3.00
+          },
+          {
+            "id": 2,
+            "nome": "Cheddar",
+            "preco": 2.50
+          },
+          {
+            "id": 3,
+            "nome": "Fritas",
+            "preco": 5.00
+          } ,
+          {
+            "id": 4,
+            "nome": "Cebola empanada",
+            "preco": 4.00
+          } ,
+          {
+            "id": 5,
+            "nome": "Mussarela",
+            "preco": 2.00
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "nome": "X-Salada",
+        "descricao": "Pão, hambúrguer, queijo, alface, tomate e molho especial.",
+        "img": "../src/assets/img/salada.jpg" ,
+        "preco": 17.50,
+        "adicionais": [
+          {
+            "id": 1,
+            "nome": "Bacon",
+            "preco": 3.00
+          },
+          {
+            "id": 2,
+            "nome": "Cheddar",
+            "preco": 2.50
+          },
+          {
+            "id": 3,
+            "nome": "Fritas",
+            "preco": 5.00
+          } ,
+          {
+            "id": 4,
+            "nome": "Cebola empanada",
+            "preco": 4.00
+          } ,
+          {
+            "id": 5,
+            "nome": "Mussarela",
+            "preco": 2.00
+          }
+        ]
+      }, 
+      {
+        "id": 3,
+        "nome": "X-Bacon",
+        "descricao": "Pão, hambúrguer, queijo, bacon e molho especial.",
+        "img": "../src/assets/img/bacon.jpg" ,
+        "preco": 17.50,
+        "adicionais": [
+          {
+            "id": 1,
+            "nome": "Bacon",
+            "preco": 3.00
+          },
+          {
+            "id": 2,
+            "nome": "Cheddar",
+            "preco": 2.50
+          },
+          {
+            "id": 3,
+            "nome": "Fritas",
+            "preco": 5.00
+          } ,
+          {
+            "id": 4,
+            "nome": "Cebola empanada",
+            "preco": 4.00
+          } ,
+          {
+            "id": 5,
+            "nome": "Mussarela",
+            "preco": 2.00
+          }
+        ]
+      }, 
+      {
+        "id": 4,
+        "nome": "X-Frango",
+        "descricao": "Pão, hambúrguer, queijo, frango e molho especial.",
+        "img": "../src/assets/img/frango.jpg" ,
+        "preco": 17.50,
+        "adicionais": [
+          {
+            "id": 1,
+            "nome": "Bacon",
+            "preco": 3.00
+          },
+          {
+            "id": 2,
+            "nome": "Cheddar",
+            "preco": 2.50
+          },
+          {
+            "id": 3,
+            "nome": "Fritas",
+            "preco": 5.00
+          } ,
+          {
+            "id": 4,
+            "nome": "Cebola empanada",
+            "preco": 4.00
+          } ,
+          {
+            "id": 5,
+            "nome": "Mussarela",
+            "preco": 2.00
+          }
+        ]
+      }
+      
+    ]
+  },
+  {
+    "id": 2,
+    "categoria": "Porções",
+    "itens": [
+      {
+        "id": 5,
+        "nome": "Batata Frita",
+        "descricao": "Porção de batatas fritas crocantes 350g.",
+        "img": "../src/assets/img/batata.jpg" ,
+        "preco": 25.00,
+        "adicionais": [
+          {
+            "id": 6,
+            "nome": "Cheddar e Bacon",
+            "preco": 5.00
+          },
+          {
+            "id": 7,
+            "nome": "Frango",
+            "preco": 6.00
+          }, 
+          {
+            "id": 8,
+            "nome": "Coração",
+            "preco": 8.00
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "nome": "Onion Rings",
+        "descricao": "Anéis de cebola empanados e fritos 150g.",
+        "img": "../src/assets/img/onion.jpg" ,
+        "preco": 15.00,
+        "adicionais": [
+          {
+            "id": 6,
+            "nome": "Cheddar e Bacon",
+            "preco": 5.00
+          },
+          {
+            "id": 7,
+            "nome": "Frango",
+            "preco": 6.00
+          }, 
+          {
+            "id": 8,
+            "nome": "Coração",
+            "preco": 8.00
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "nome": "Isca de peixes",
+        "descricao": "Isca de peixes empanadas 150g.",
+        "img": "../src/assets/img/iscas.jpg" ,
+        "preco": 40.00,
+        "adicionais": [
+          {
+            "id": 6,
+            "nome": "Cheddar e Bacon",
+            "preco": 5.00
+          },
+          {
+            "id": 7,
+            "nome": "Frango",
+            "preco": 6.00
+          }, 
+          {
+            "id": 8,
+            "nome": "Coração",
+            "preco": 8.00
+          }
+        ]
+      }, 
+      {
+        "id": 8,
+        "nome": "Coxinha",
+        "descricao": "Coxinha de frango 10un.",
+        "img": "../src/assets/img/coxinha.jpg" ,
+        "preco": 25.00,
+        "adicionais": [
+          {
+            "id": 6,
+            "nome": "Cheddar e Bacon",
+            "preco": 5.00
+          },
+          {
+            "id": 7,
+            "nome": "Frango",
+            "preco": 6.00
+          }, 
+          {
+            "id": 8,
+            "nome": "Coração",
+            "preco": 8.00
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "categoria": "Bebidas",
+    "itens": [
+      {
+        "id": 9,
+        "nome": "Coca-Cola Refrigerante Lata",
+        "descricao": "Coca-Cola.",
+        "img": "../src/assets/img/coca.jpg" ,
+        "preco": 6.00,
+        "adicionais": []
+      },
+      {
+        "id": 10,
+        "nome": "Guaraná Refrigerante Lata",
+        "descricao": "Guaraná.",
+        "img": "../src/assets/img/guarana.jpg" ,
+        "preco": 6.00,
+        "adicionais": []
+      },
+      {
+        "id": 11,
+        "nome": "Coca-Cola Refrigerante 2l",
+        "descricao": "Coca-Cola.",
+        "img": "../src/assets/img/coca-2l.jpg" ,
+        "preco": 12.00,
+        "adicionais": []
+      },
+      {
+        "id": 12,
+        "nome": "Guaraná Refrigerante 2l",
+        "descricao": "Guaraná.",
+        "img": "../src/assets/img/guarana-2l.jpg" ,
+        "preco": 12.00,
+        "adicionais": []
+      },
+      {
+        "id": 13,
+        "nome": "Agua com gás",
+        "descricao": "Água com gás.",
+        "img": "../src/assets/img/agua.jpg" ,
+        "preco": 4.00,
+        "adicionais": []
+      },
+      {
+        "id": 14,
+        "nome": "Agua sem gás",
+        "descricao": "Água sem gás.",
+        "img": "../src/assets/img/agua.jpg" ,
+        "preco": 4.00,
+        "adicionais": []
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "categoria": "Drinks",
+    "itens": [
+      {
+        "id": 15,
+        "nome": "Caipirinha",
+        "descricao": "Cachaça, limão, açúcar e gelo.",
+        "img": "../src/assets/img/caipira.jpg" ,
+        "preco": 18.00,
+        "adicionais": []
+      },
+      {
+        "id": 16,
+        "nome": "Piña colada",
+        "descricao": " suco de abacaxi, leite de coco, rum e gelo picado .",
+        "img": "../src/assets/img/pina.jpg" ,
+        "preco": 20.00,
+        "adicionais": []
+      }
+    ]
+  }
+]
+
+  

@@ -1,0 +1,86 @@
+.inputContainer {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.input {
+  flex: 1;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid var(--cinzaBorda);
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.input:focus,
+.input:hover {
+  outline: none;
+  background-color: var(--hover);
+}
+
+.adicionaisContainer {
+  border: 2px solid var(--cinzaBorda);
+}
+
+.containerAdicional {
+  padding: 10px 15px;
+}
+
+.adicionais {
+  display: flex;
+  padding: 10px 15px;
+}
+
+.addInfo {
+  flex: 1;
+}
+
+.addItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.addItem button {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.adicionais + .adicionais {
+  border-top: 2px solid var(--cinzaBorda);
+}
+
+.nome {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.preco {
+  font-size: 0.85rem;
+  color: var(--cinzaEscuro1);
+}
+
+.obsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 15px;
+}
+
+.obs {
+  border: 2px solid var(--cinzaBorda);
+  border-radius: 8px;
+  resize: none;
+  padding: 10px;
+  transition: 0.3s;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.obs:focus,
+.obs:hover {
+  outline: none;
+  background-color: var(--hover);
+}

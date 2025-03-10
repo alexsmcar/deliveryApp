@@ -1,0 +1,18 @@
+.addCarrinhoContainer {
+  padding: 15px;
+}
+.btnAdicionar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--vermelho);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.btnAdicionar span {
+  color: var(--branco);
+  font-weight: 500;
+  font-size: 1rem;
+}

@@ -1,0 +1,28 @@
+.headerContainer {
+    background: var(--header);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5px 10px;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logoContainer img {
+    width: 45px;
+    border-radius: 50%;
+}
+
+.logoContainer p {
+    color: var(--branco);
+    font-weight: 600;
+}

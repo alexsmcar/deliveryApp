@@ -1,0 +1,27 @@
+.infoContainer {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 5px;
+
+}
+
+.dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: var(--cinza);
+}
+
+.info,
+.mensagem {
+    font-size: .85rem;
+}
+
+.mensagem {
+    text-align: center;
+    color: var(--vermelhoClaro);
+    background: var(--rosaClaro);
+    border-radius: 4px;
+    padding: 5px 0;
+}

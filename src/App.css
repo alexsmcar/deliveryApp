@@ -1,0 +1,33 @@
+body {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  margin: 0px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.input {
+  font-family: inherit;
+}
+
+h1,h2,h3 {
+  margin: 0px;
+}
+
+button {
+  background: none;
+  border: 0px;
+  padding: 0px;
+  cursor: pointer;
+}
+
+p {
+  margin: 0px;
+}
+.conteudoPrincipal {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}

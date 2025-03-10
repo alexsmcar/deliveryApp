@@ -1,0 +1,13 @@
+.btn {
+    padding: 10px 8px;
+}
+
+.btn::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 5px;
+    border-radius: 2px;
+    background: var(--branco);
+    box-shadow: 0 8px var(--branco), 0 -8px var(--branco);
+}
