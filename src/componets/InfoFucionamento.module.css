@@ -25,3 +25,9 @@
     border-radius: 4px;
     padding: 5px 0;
 }
+
+@media (max-width: 700px) {
+    .mensagem {
+        padding: 2px 0;
+    }
+}

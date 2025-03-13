@@ -26,8 +26,17 @@ button {
 p {
   margin: 0px;
 }
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
 .conteudoPrincipal {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 10px 10px;
 }

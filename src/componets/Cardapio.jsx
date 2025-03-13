@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import style from "./Cardapio.module.css";
 import ItensCategoria from "./ItensCategoria";
+import Pesquisa from "../compentes-icons/Pesquisa";
 
 function Cardapio() {
   const [pesquisa, setPesquisa] = useState("");
@@ -12,12 +13,12 @@ function Cardapio() {
     const response = await fetch("./cardapio.json");
     const json = await response.json();
     setData(json);
-    SetCardapio(json)
+    SetCardapio(json);
   };
 
   useEffect(() => {
     request();
-  }, []); 
+  }, []);
 
   useEffect(() => {
     if (pesquisa.length > 0) {
@@ -29,7 +30,7 @@ function Cardapio() {
             }
           });
           if (elements.length > 0) {
-            return {...cat, itens: elements};
+            return { ...cat, itens: elements };
           } else {
             return null;
           }
@@ -41,10 +42,9 @@ function Cardapio() {
     }
   }, [pesquisa]);
 
-
   return (
     <section className={style.container}>
-      <form
+      <div
         className={`${style.form} ${form && style.active}`}
         value={pesquisa}
         onBlur={() => setForm(false)}
@@ -57,8 +57,10 @@ function Cardapio() {
           autoComplete="off"
           placeholder="Digite para buscar no cardápio..."
         />
-        <button></button>
-      </form>
+        <span className={style.icone}>
+          <Pesquisa size={"20px"} fill={"var(--vermelho)"} />
+        </span>
+      </div>
       {data && <ItensCategoria data={cardapio} pesquisa={pesquisa} />}
     </section>
   );

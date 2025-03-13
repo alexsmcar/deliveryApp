@@ -1,0 +1,94 @@
+.carrinhoContainer {
+  border: 2px solid var(--cinzaBorda);
+  border-bottom: 0px;
+  border-radius: 8px 8px 0 0;
+}
+.itensDoCarrinho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.itensDoCarrinho + .itensDoCarrinho {
+  border-top: 2px solid var(--cinzaBorda);
+}
+
+.infoItens {
+  display: flex;
+  gap: 10px;
+}
+.img {
+  max-width: 50px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.quantidade {
+  margin-right: 5px;
+}
+
+.adicionalContainer,
+.obs {
+  font-size: 0.9rem;
+  word-break: break-all;
+}
+.adicional {
+  margin-left: 10px;
+}
+
+.adicionalTitulo {
+  font-weight: 600;
+}
+
+.nomeItem {
+  font-size: 1rem;
+}
+.valor {
+  color: var(--vermelho);
+  font-weight: 700;
+}
+
+.subTotal {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  background: var(--vermelho);
+  color: var(--branco);
+  font-family: "Roboto";
+  margin-bottom: 15px;
+}
+
+.acoes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.acoes li {
+  display: flex;
+}
+
+.fecharPedido {
+  grid-column: 1 / -1;
+}
+
+.btns {
+  padding: 10px;
+  border: 2px solid var(--cinzaBorda);
+  font-size: 1rem;
+  font-family: "Poppins";
+  border-radius: 8px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.carrinhoVazio {
+    text-align: center;
+    padding: 10px;
+}
+
+@media (max-width: 700px) {
+  .acoes {
+    grid-template-columns: 1fr;
+  }
+}

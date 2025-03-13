@@ -1,9 +1,9 @@
 import React from "react";
 
-function Seta({classe, fill}) {
+function Seta({ classe, fill }) {
   return (
     <svg
-    className={classe}
+      className={classe}
       xmlns="http://www.w3.org/2000/svg"
       width="16"
       height="16"

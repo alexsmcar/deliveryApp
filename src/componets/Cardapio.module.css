@@ -8,22 +8,18 @@
     border-radius: 4px;
     overflow: hidden;
     transition: .3s;
+    padding: 15px 10px;
 
 }
-
-.form button {
-    width: 30px;
-    height: 30px;
-    padding: 15px;
-    background: url(../assets/icones/pesquisar.svg) no-repeat center;
+.icone {
+    display: flex;
+    align-items: center;
 }
-
 .pesquisa {
     flex: 1;
     font-family: inherit;
     font-size: 1rem;
     border: 0px;
-    padding: 15px 10px;
 }
 
 .pesquisa:focus {

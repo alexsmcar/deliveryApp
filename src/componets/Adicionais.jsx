@@ -124,9 +124,8 @@ function Adicionais({ item, formatValue }) {
           rows="4"
           className={style.obs}
           onChange={({ target }) => setObs(target.value)}
-        >
-          {obs}
-        </textarea>
+          value={obs}
+        ></textarea>
       </div>
       <BtnAdicionar
         valor={valor}

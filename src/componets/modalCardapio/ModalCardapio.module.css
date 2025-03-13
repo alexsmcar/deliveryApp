@@ -84,7 +84,7 @@
 }
 
 .preco {
-  color: var(--cinzaEscuro2);
+  color: var(--vermelho);
   font-weight: 700;
   font-size: 1.2rem;
 }
