@@ -38,5 +38,9 @@ a {
 .conteudoPrincipal {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 10px 10px;
+  padding: 10px 10px 70px 10px;
+}
+
+#root {
+min-height: 100vh;
 }

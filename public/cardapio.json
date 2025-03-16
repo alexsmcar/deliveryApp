@@ -7,7 +7,7 @@
         "id": 1,
         "nome": "X-Burguer",
         "descricao": "Pão, hambúrguer, queijo e molho especial.",
-        "img": "../src/assets/img/burger.jpg" ,
+        "img": "./img/burger.jpg" ,
         "preco": 15.90,
         "adicionais": [
           {
@@ -41,7 +41,7 @@
         "id": 2,
         "nome": "X-Salada",
         "descricao": "Pão, hambúrguer, queijo, alface, tomate e molho especial.",
-        "img": "../src/assets/img/salada.jpg" ,
+        "img": "./img/salada.jpg" ,
         "preco": 17.50,
         "adicionais": [
           {
@@ -75,7 +75,7 @@
         "id": 3,
         "nome": "X-Bacon",
         "descricao": "Pão, hambúrguer, queijo, bacon e molho especial.",
-        "img": "../src/assets/img/bacon.jpg" ,
+        "img": "./img/bacon.jpg" ,
         "preco": 17.50,
         "adicionais": [
           {
@@ -109,7 +109,7 @@
         "id": 4,
         "nome": "X-Frango",
         "descricao": "Pão, hambúrguer, queijo, frango e molho especial.",
-        "img": "../src/assets/img/frango.jpg" ,
+        "img": "./img/frango.jpg" ,
         "preco": 17.50,
         "adicionais": [
           {
@@ -150,7 +150,7 @@
         "id": 5,
         "nome": "Batata Frita",
         "descricao": "Porção de batatas fritas crocantes 350g.",
-        "img": "../src/assets/img/batata.jpg" ,
+        "img": "./img/batata.jpg" ,
         "preco": 25.00,
         "adicionais": [
           {
@@ -174,7 +174,7 @@
         "id": 6,
         "nome": "Onion Rings",
         "descricao": "Anéis de cebola empanados e fritos 150g.",
-        "img": "../src/assets/img/onion.jpg" ,
+        "img": "./img/onion.jpg" ,
         "preco": 15.00,
         "adicionais": [
           {
@@ -198,7 +198,7 @@
         "id": 7,
         "nome": "Isca de peixes",
         "descricao": "Isca de peixes empanadas 150g.",
-        "img": "../src/assets/img/iscas.jpg" ,
+        "img": "./img/iscas.jpg" ,
         "preco": 40.00,
         "adicionais": [
           {
@@ -222,7 +222,7 @@
         "id": 8,
         "nome": "Coxinha",
         "descricao": "Coxinha de frango 10un.",
-        "img": "../src/assets/img/coxinha.jpg" ,
+        "img": "./img/coxinha.jpg" ,
         "preco": 25.00,
         "adicionais": [
           {
@@ -252,7 +252,7 @@
         "id": 9,
         "nome": "Coca-Cola Refrigerante Lata",
         "descricao": "Coca-Cola.",
-        "img": "../src/assets/img/coca.jpg" ,
+        "img": "./img/coca.jpg" ,
         "preco": 6.00,
         "adicionais": []
       },
@@ -260,7 +260,7 @@
         "id": 10,
         "nome": "Guaraná Refrigerante Lata",
         "descricao": "Guaraná.",
-        "img": "../src/assets/img/guarana.jpg" ,
+        "img": "./img/guarana.jpg" ,
         "preco": 6.00,
         "adicionais": []
       },
@@ -268,7 +268,7 @@
         "id": 11,
         "nome": "Coca-Cola Refrigerante 2l",
         "descricao": "Coca-Cola.",
-        "img": "../src/assets/img/coca-2l.jpg" ,
+        "img": "./img/coca-2l.jpg" ,
         "preco": 12.00,
         "adicionais": []
       },
@@ -276,7 +276,7 @@
         "id": 12,
         "nome": "Guaraná Refrigerante 2l",
         "descricao": "Guaraná.",
-        "img": "../src/assets/img/guarana-2l.jpg" ,
+        "img": "./img/guarana-2l.jpg" ,
         "preco": 12.00,
         "adicionais": []
       },
@@ -284,7 +284,7 @@
         "id": 13,
         "nome": "Agua com gás",
         "descricao": "Água com gás.",
-        "img": "../src/assets/img/agua.jpg" ,
+        "img": "./img/agua.jpg" ,
         "preco": 4.00,
         "adicionais": []
       },
@@ -292,7 +292,7 @@
         "id": 14,
         "nome": "Agua sem gás",
         "descricao": "Água sem gás.",
-        "img": "../src/assets/img/agua.jpg" ,
+        "img": "./img/agua.jpg" ,
         "preco": 4.00,
         "adicionais": []
       }
@@ -306,7 +306,7 @@
         "id": 15,
         "nome": "Caipirinha",
         "descricao": "Cachaça, limão, açúcar e gelo.",
-        "img": "../src/assets/img/caipira.jpg" ,
+        "img": "./img/caipira.jpg" ,
         "preco": 18.00,
         "adicionais": []
       },
@@ -314,7 +314,7 @@
         "id": 16,
         "nome": "Piña colada",
         "descricao": " suco de abacaxi, leite de coco, rum e gelo picado .",
-        "img": "../src/assets/img/pina.jpg" ,
+        "img": "./img/pina.jpg" ,
         "preco": 20.00,
         "adicionais": []
       }

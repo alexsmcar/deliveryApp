@@ -2,6 +2,8 @@
   position: fixed;
   display: flex;
   padding: 20px;
+  opacity: 0;
+  pointer-events: none;
   justify-content: center;
   z-index: 1000;
   top: 0px;
@@ -10,6 +12,12 @@
   height: 100vh;
   box-sizing: border-box;
   background: rgba(0, 0, 0, 0.4);
+  transition: .5s;
+}
+
+.container.active {
+  opacity: initial;
+  pointer-events: initial;
 }
 
 .pedido {
@@ -17,9 +25,11 @@
   background: var(--branco);
   border-radius: 8px;
   overflow-y: auto;
-  transform: translateY(-70%);
+  animation: outModalEffect .5s forwards;
+}
+
+.pedido.active {
   animation: modalEffect .5s forwards;
-  opacity: 0;
 }
 
 .pedido h2, h3 {
@@ -27,9 +37,25 @@
 }
 
 @keyframes modalEffect {
+  from {
+    transform: translateY(-70%);
+    opacity: 0;
+  }
   to {
     transform: initial;
     opacity: initial;
+
+  }
+}
+
+@keyframes outModalEffect {
+  from {
+    transform: initial;
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-70%);
+    opacity: 0;
 
   }
 }

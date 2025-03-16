@@ -9,12 +9,12 @@
 }
 
 .container.active {
-    max-height: 800px;
+    max-height: 1200px;
 }
 
 .cardapioContainer {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto;
     align-items: center;
     border: 2px solid var(--cinzaBorda);
     border-radius: 8px;
@@ -50,5 +50,9 @@
 @media (max-width: 700px) {
     .container {
         grid-template-columns: 1fr;
+    }
+
+    .img {
+        width: 85px;
     }
 }

@@ -47,11 +47,13 @@ function ItensCardapio({ itens, status }) {
           </div>
         );
       })}
-      {modal && (
+      {cardapio && (
         <ModalCardapio
           item={cardapio}
           setModal={setModal}
           formatValue={formatValue}
+          modal={modal}
+          setCardapio={setCardapio}
         />
       )}
     </div>

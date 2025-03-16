@@ -3,7 +3,7 @@ import style from "./BtnAdicionar.module.css";
 import { CarrinhoContext } from "./carrinhoDeCompras/CarrinhoContext";
 import { useNavigate } from "react-router-dom";
 
-function BtnAdicionar({ formatValue, valor, nomeItem, img, ...props }) {
+function BtnAdicionar({ setModal, formatValue, valor, nomeItem, img, ...props }) {
   const carrinhoItens = useContext(CarrinhoContext);
 
   const navigate = useNavigate();
@@ -25,7 +25,8 @@ function BtnAdicionar({ formatValue, valor, nomeItem, img, ...props }) {
       ];
     });
     document.body.style.overflow = "";
-    navigate("/carrinho")
+    setModal(false)
+    navigate("/")
   }
   
   return (

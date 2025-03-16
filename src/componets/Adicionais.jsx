@@ -5,7 +5,7 @@ import Adicionar from "../compentes-icons/Adicionar";
 import Remover from "../compentes-icons/Remover";
 import BtnAdicionar from "./BtnAdicionar";
 
-function Adicionais({ item, formatValue }) {
+function Adicionais({ item, formatValue, setModal }) {
   const [value, setValue] = useState("");
   const [valor, setValor] = useState(item.preco);
   const [adicionais, setAdicionais] = useState([]);
@@ -78,6 +78,7 @@ function Adicionais({ item, formatValue }) {
         nomeItem={item.nome}
         img={item.img}
         totalAdicionais={[]}
+        setModal={setModal}
       />
     );
   return (
@@ -134,6 +135,7 @@ function Adicionais({ item, formatValue }) {
         img={item.img}
         obs={obs}
         totalAdicionais={totalAdicionais}
+        setModal={setModal}
       />
     </div>
   );

@@ -80,11 +80,32 @@
   border-radius: 8px;
   text-align: center;
   flex-grow: 1;
+  transition: 0.3s;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnAvancar {
+  background: var(--verde);
+  color: var(--branco);
+}
+
+.btnAvancar:hover,
+.btnAvancar:focus {
+  outline: none;
+  background: var(--verdeHover);
+}
+.btnsHover:hover,
+.btnsHover:focus {
+  outline: none;
+  background: var(--hover);
 }
 
 .carrinhoVazio {
-    text-align: center;
-    padding: 10px;
+  text-align: center;
+  padding: 10px;
 }
 
 @media (max-width: 700px) {

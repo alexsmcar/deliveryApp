@@ -3,14 +3,19 @@ import style from "./ModalCardapio.module.css";
 import Seta from "../../compentes-icons/seta";
 import Adicionais from "../Adicionais";
 
-function ModalCardapio({ item, setModal, formatValue }) {
+function ModalCardapio({ item,modal, setModal, formatValue, setCardapio }) {
   function handleClick({ target, currentTarget }) {
-    if (target === currentTarget) setModal(false);
+    if (target === currentTarget) setModal(false); 
+  }
+  if (!modal) {
+    setTimeout(() => {
+      setCardapio("")
+    },500)
   }
 
   return (
-    <div className={style.container} onClick={handleClick}>
-      <div className={style.pedido}>
+    <div className={`${style.container} ${modal && style.active}`} onClick={handleClick}>
+      <div className={`${style.pedido} ${modal && style.active}`}>
         <div className={style.detalhes}>
           <button onClick={() => setModal(false)}>
             <Seta fill="#FFFFFF" classe={style.svg} />
@@ -35,6 +40,7 @@ function ModalCardapio({ item, setModal, formatValue }) {
           adicionais={item.adicionais}
           item={item}
           formatValue={formatValue}
+          setModal={setModal}
         />
       </div>
     </div>

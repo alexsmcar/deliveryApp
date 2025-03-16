@@ -1,0 +1,31 @@
+.label {
+    display: block;
+    font-family: "Roboto";
+    margin-bottom: 5px;
+}
+
+.input,
+.select {
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 2px solid var(--cinzaBorda);
+    padding: 10px;
+    transition: .3s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input:focus,
+.input:hover,
+.select:focus,
+.select:hover {
+    outline: none;
+    background: var(--hover);
+}
+
+.select {
+    cursor: pointer;
+}
+.selectContainer {
+    grid-column: 1 / -1;
+}

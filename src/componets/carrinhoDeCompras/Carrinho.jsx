@@ -4,6 +4,8 @@ import { CarrinhoContext } from "./CarrinhoContext";
 import { formatValue } from "../../helpers/Helpers";
 import { Link } from "react-router-dom";
 import AlterarQtd from "./AlterarQtd";
+import AddIcon from "../../compentes-icons/AddIcon";
+import LixeiraIcon from "../../compentes-icons/LixeiraIcon";
 
 function Carrinho() {
   const carrinhoDeCompras = useContext(CarrinhoContext);
@@ -12,11 +14,15 @@ function Carrinho() {
   useEffect(() => {
     setSubTotal(() => {
       return carrinhoDeCompras.carrinho.reduce(
-        (prev, { valor, quantidade }) => prev + (valor * quantidade),
+        (prev, { valor, quantidade }) => prev + valor * quantidade,
         0
       );
     });
   }, [carrinhoDeCompras.carrinho]);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
 
   return (
     <main className="conteudoPrincipal">
@@ -82,15 +88,23 @@ function Carrinho() {
       </div>
       <ul className={style.acoes}>
         <li className={style.fecharPedido}>
-          {
-            <Link to={"/"} className={style.btns}>
-              Fechar pedido
+          {carrinhoDeCompras.carrinho.length > 0 ? (
+            <Link
+              to={"/finalizar-pedido"}
+              className={`${style.btns} ${style.btnAvancar}`}
+            >
+              Fechar Pedido
             </Link>
-          }
+          ) : (
+            <Link to={"/"} className={`${style.btns} ${style.btnAvancar}`}>
+              Ver Cardápio
+            </Link>
+          )}
         </li>
         <li>
           {
-            <Link to={"/"} className={style.btns}>
+            <Link to={"/"} className={`${style.btns} ${style.btnsHover}`}>
+              <AddIcon size={"16px"} fill={"#000000"} />
               Continuar Comprando
             </Link>
           }
@@ -98,8 +112,9 @@ function Carrinho() {
         <li>
           <button
             onClick={() => carrinhoDeCompras.setCarrinho([])}
-            className={style.btns}
+            className={`${style.btns} ${style.btnsHover}`}
           >
+            <LixeiraIcon size={"16px"} fill={"#000000"} />
             Limpar Carrinho
           </button>
         </li>
