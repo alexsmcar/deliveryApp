@@ -1,0 +1,38 @@
+.btn {
+  padding: 10px;
+  border: 2px solid var(--cinzaBorda);
+  font-size: 1rem;
+  font-family: "Poppins";
+  border-radius: 8px;
+  transition: 0.3s;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.nav {
+  display: grid;
+  margin-top: 15px;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.btn:focus,
+.btn:hover {
+  outline: none;
+  background: var(--hover);
+}
+
+.btn.avancar {
+  background: var(--verde);
+  color: var(--branco);
+}
+.btn.avancar:focus,
+.btn.avancar:hover {
+  background: var(--verdeHover);
+}
+
+@media (max-width: 700px) {
+  .nav {
+    grid-template-columns: 1fr;
+  }
+}

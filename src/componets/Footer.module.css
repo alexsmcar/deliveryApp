@@ -1,15 +1,19 @@
 .footerContainer {
+    display: flex;
+    align-items: center;
     background: var(--branco);
-    width: 100%;
+    width: 100vw;
     height: 60px;
     box-sizing: border-box;
     position: fixed;
     bottom: 0px;
-    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     border-top: 2px solid var(--cinzaBorda) ;
 }
 .footer {
     max-width: 1200px;
+    flex: 1;
     display: flex;
     margin: 0 auto;
     justify-content: space-between;

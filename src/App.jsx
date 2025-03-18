@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import "./Cores.css";
 import Header from "./componets/Header";
-import Main from "./componets/ConteudoMain";
+import ConteudoMain from "./componets/ConteudoMain";
 import { CarrinhoStorage } from "./componets/carrinhoDeCompras/CarrinhoContext";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Carrinho from "./componets/carrinhoDeCompras/Carrinho";
@@ -16,9 +16,9 @@ function App() {
       <CarrinhoStorage>
         <Header />
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route path="/" element={<ConteudoMain />} />
           <Route path="carrinho" element={<Carrinho />} />
-          <Route path="finalizar-pedido" element={<FinalizarPedido />} />
+          <Route path="entrega" element={<FinalizarPedido />} />
           <Route path="pagamento" element={<Pagamento />} />
         </Routes>
         <Footer />

@@ -29,3 +29,15 @@
 .selectContainer {
     grid-column: 1 / -1;
 }
+
+.mensagemErro {
+    font-size: .75rem;
+    color: var(--vermelho);
+    margin-left: 10px;
+}
+
+.requiredSpan {
+    font-size: 1rem;
+    color: var(--vermelho);
+    margin-left: 5px;
+}

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import AlterarQtd from "./AlterarQtd";
 import AddIcon from "../../compentes-icons/AddIcon";
 import LixeiraIcon from "../../compentes-icons/LixeiraIcon";
+import Head from "../../helpers/Head"
 
 function Carrinho() {
   const carrinhoDeCompras = useContext(CarrinhoContext);
@@ -26,6 +27,7 @@ function Carrinho() {
 
   return (
     <main className="conteudoPrincipal">
+      <Head text="Carrinho"/>
       <div>
         <div className={style.carrinhoContainer}>
           {carrinhoDeCompras.carrinho.length > 0 ? (
@@ -90,7 +92,7 @@ function Carrinho() {
         <li className={style.fecharPedido}>
           {carrinhoDeCompras.carrinho.length > 0 ? (
             <Link
-              to={"/finalizar-pedido"}
+              to={"/entrega"}
               className={`${style.btns} ${style.btnAvancar}`}
             >
               Fechar Pedido

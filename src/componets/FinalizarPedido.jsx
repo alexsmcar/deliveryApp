@@ -1,26 +1,84 @@
-import React, { useState } from "react";
+import React, { use, useContext, useEffect, useState } from "react";
 import style from "./FinalizarPedido.module.css";
 import InputPedido from "./InputPedido";
 import Select from "./Select";
 import Endereco from "./Endereco";
-import { NavLink, Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import useForm from "../hooks/useForm";
+import Navegacao from "./navegacao";
+import { CarrinhoContext } from "./carrinhoDeCompras/CarrinhoContext";
+import Head from "../helpers/Head"
 
 function FinalizarPedido() {
-  const [nome, setNome] = useState("");
-  const [whats, setWhats] = useState("");
   const [entrega, setEntrega] = useState("");
-  const [cep, setCep] = useState("");
-  const [rua, setRua] = useState("");
-  const [numero, setNumero] = useState("");
-  const [bairro, setBairro] = useState("");
-  const [complemento, setComplemento] = useState("");
+  const [error, setError] = useState(null);
+  const nome = useForm("nome");
+  const whats = useForm("whats");
+  const cep = useForm("cep");
+  const rua = useForm("rua");
+  const numero = useForm("numero");
+  const bairro = useForm("bairro");
+  const cidade = useForm("cidade");
+  const complemento = useForm();
+
   const navigate = useNavigate();
+  const endereco = useContext(CarrinhoContext);
 
   function handleSubmit(event) {
     event.preventDefault();
-    navigate("/pagamento");
+    const array = [nome, whats, cep, numero, rua, bairro, cidade];
+    const isCompleted = array.every((prev) => {
+      return prev.validate();
+    });
+    if (isCompleted && entrega === "entrega") {
+      endereco.setEndereco(() => {
+        return {
+          nome: nome.value,
+          whats: whats.value,
+          entrega,
+          cep: cep.value,
+          rua: rua.value,
+          numero: numero.value,
+          bairro: bairro.value,
+          cidade: cidade.value,
+        };
+      });
+      navigate("/pagamento");
+    } else if (entrega === "retirada" && nome.validate && whats.validate) {
+      endereco.setEndereco(() => {
+        return {
+          nome: nome.value,
+          whats: whats.value,
+          entrega,
+        };
+      });
+      navigate("/pagamento");
+    } else if(!entrega) {
+      setError("campo não preenchido")
+    }
   }
 
+  useEffect(() => {
+    if (Object.keys(endereco.endereco).length > 0) {
+      nome.setValue(endereco.endereco.nome);
+      whats.setValue(endereco.endereco.whats);
+      setEntrega(endereco.endereco.entrega);
+      if (endereco.endereco.entrega === "entrega") {
+        cep.setValue(endereco.endereco.cep);
+        rua.setValue(endereco.endereco.rua);
+        bairro.setValue(endereco.endereco.bairro);
+        cidade.setValue(endereco.endereco.cidade);
+        numero.setValue(endereco.endereco.numero);
+        complemento.setValue(endereco.endereco.complemento);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    if (endereco.carrinho.length < 1) {
+      navigate("/");
+    }
+  }, [endereco.carrinho]);
   const optionsDelivery = [
     {
       nome: "Entrega",
@@ -33,22 +91,17 @@ function FinalizarPedido() {
   ];
   return (
     <main className="conteudoPrincipal">
+      <Head text="Entrega"/>
       <form onSubmit={handleSubmit}>
         <div className={style.container}>
-          <span className={style.finalizarPedido}>Finalizar Pedido</span>
+          <span className={style.finalizarPedido}>Informações de Entrega</span>
           <div className={style.infoContainer}>
-            <InputPedido
-              id={"nome"}
-              label={"Nome"}
-              value={nome}
-              setValue={setNome}
-            />
+            <InputPedido id={"nome"} label={"Nome"} {...nome} />
             <InputPedido
               id={"telefone"}
               label={"Whatsapp"}
-              value={whats}
-              setValue={setWhats}
               placeholder={"(_ _) _ _ _ _ _ - _ _ _ _"}
+              {...whats}
             />
             <Select
               id={"pagamento"}
@@ -56,31 +109,22 @@ function FinalizarPedido() {
               setValue={setEntrega}
               options={optionsDelivery}
               value={entrega}
+              error={error}
+              setError={setError}
             />
             {entrega === "entrega" && (
               <Endereco
-                setCep={setCep}
                 cep={cep}
                 rua={rua}
-                setRua={setRua}
                 numero={numero}
-                setNumero={setNumero}
                 bairro={bairro}
-                setBairro={setBairro}
                 complemento={complemento}
-                setComplemento={setComplemento}
+                cidade={cidade}
               />
             )}
           </div>
         </div>
-        <div className={style.nav}>
-          <Link className={style.btn} to={"/carrinho"}>
-            Voltar
-          </Link>
-          <button className={`${style.btn} ${style.avancar}`}>
-            Ir Para o Pagamento
-          </button>
-        </div>
+        <Navegacao texto={"Ir Para o Pagamento"} rota={"/carrinho"} />
       </form>
     </main>
   );

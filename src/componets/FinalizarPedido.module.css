@@ -22,43 +22,77 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.btn {
-  padding: 10px;
-  border: 2px solid var(--cinzaBorda);
+.subTitulo {
   font-size: 1rem;
-  font-family: "Poppins";
-  border-radius: 8px;
-  transition: 0.3s;
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  justify-content: center;
+  font-weight: 500;
+  font-family: "Roboto";
+  margin-bottom: 5px;
+  color: var(--cinzaEscuro2);
 }
-.nav {
-    display: grid;
-    margin-top: 15px;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+.dadosClienteContainer {
+  grid-column: 1/ -1;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--cinzaBorda);
 }
-.btn:focus,
-.btn:hover {
-  outline: none;
-  background: var(--hover);
+.dataContainer {
+  margin-left: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.btn.avancar {
-  background: var(--verde);
+.itensCarrinhoContainer {
+  row-gap: 10px;
+}
+
+.dataContainer p {
+  text-transform: capitalize;
+  font-family: "Roboto";
+  line-height: 1.5;
+}
+
+.nomeItem {
+  font-weight: 500;
+}
+
+.preco {
+  color: var(--vermelho);
+  font-weight: 500;
+}
+
+.adicionaisContainer {
+  margin-left: 5px;
+}
+
+.pagamentoContainer {
+  background: var(--vermelho);
+  padding: 10px;
+}
+
+.pagamento {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagamento p {
+  font-family: "Roboto";
   color: var(--branco);
 }
-.btn.avancar:focus,
-.btn.avancar:hover {
-  background: var(--verdeHover);
+
+.containerPagamento {
+  border-radius: 8px 8px 0 0;
+  border-bottom: none;
 }
+
+
+
 @media (max-width: 700px) {
   .infoContainer {
     grid-template-columns: 1fr;
   }
   .nav {
+    grid-template-columns: 1fr;
+  }
+  .dataContainer {
     grid-template-columns: 1fr;
   }
 }

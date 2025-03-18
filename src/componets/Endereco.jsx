@@ -1,76 +1,72 @@
 import React, { useEffect, useState } from "react";
 import InputPedido from "./InputPedido";
 
-function Endereco({
-  setCep,
-  cep,
-  setRua,
-  rua,
-  setNumero,
-  numero,
-  setBairro,
-  bairro,
-  setComplemento,
-  complemento,
-}) {
-  const [error, setError] = useState("");
+function Endereco({ cep, rua, numero, bairro, complemento, cidade }) {
   const [isDisabled, setIsDisabled] = useState(false);
-
-  const fetchCep = async (cepClean) => {
+  useEffect(() => {
+    if (cep.validate) {
+      setIsDisabled(true);
+    }
+  }, []);
+  const fetchCep = async (cepProcurado) => {
     try {
-      setError("");
       const response = await fetch(
-        `https://viacep.com.br/ws/${cepClean}/json/`
+        `https://viacep.com.br/ws/${cepProcurado}/json/`
       );
       const json = await response.json();
-      setRua(json.logradouro);
-      setBairro(json.bairro);
+      if (json.erro) throw new Error("CEP não encontrado.");
+      rua.setValue(json.logradouro);
+      bairro.setValue(json.bairro);
+      cidade.setValue(json.localidade);
       setIsDisabled(true);
     } catch (error) {
-      setError(error.message);
+      cep.setError(error.message);
     }
   };
 
-  useEffect(() => {
-    const regexCep = /^\d{5}-?\d{3}$/;
-    if (regexCep.test(cep)) {
-      const cepClean = cep.replace("-", "");
-      console.log(cepClean);
+  function handleCep({ target }) {
+    if (cep.validate()) {
+      const cepClean = cep.value.replace("-", "");
+      cep.setValue(target.value);
       fetchCep(cepClean);
-    } else if (!regexCep.test(cep) && rua && bairro) {
-      setIsDisabled(false);
-      setRua("");
-      setBairro("");
     }
-  }, [cep]);
+  }
+
+  function handleCepChange(event) {
+    cep.onChange(event);
+    if (rua.value && bairro.value) {
+      rua.setValue("");
+      bairro.setValue("");
+      cidade.setValue("");
+      setIsDisabled(false);
+    }
+  }
   return (
     <>
-      <InputPedido id="cep" label="CEP" setValue={setCep} value={cep} placeholder="00000-000" />
       <InputPedido
-        id="rua"
-        label="Rua"
-        setValue={setRua}
-        value={rua}
-        disabled={isDisabled}
+        id="cep"
+        label="CEP"
+        placeholder="00000-000"
+        error={cep.error}
+        value={cep.value}
+        isRequired={cep.isRequired}
+        onChange={handleCepChange}
+        onBlur={handleCep}
       />
-      <InputPedido
-        id="numero"
-        label="Numero"
-        setValue={setNumero}
-        value={numero}
-      />
+      <InputPedido id="rua" label="Rua" disabled={isDisabled} {...rua} />
+      <InputPedido id="numero" label="Numero" {...numero} />
       <InputPedido
         id="bairro"
         label="Bairro"
-        setValue={setBairro}
-        value={bairro}
         disabled={isDisabled}
+        {...bairro}
       />
+      <InputPedido id="complemento" label="Complemento" {...complemento} />
       <InputPedido
-        id="complemento"
-        label="Complemento"
-        setValue={setComplemento}
-        value={complemento}
+        id="cidade"
+        label="Cidade"
+        disabled={isDisabled}
+        {...cidade}
       />
     </>
   );
